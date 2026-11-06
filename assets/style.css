@@ -1,0 +1,180 @@
+
+/* ==================================
+   SMARTFLOW AI - GLOBAL DESIGN
+================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #0b1120;
+    --panel: #131e30;
+    --panel-light: #19283c;
+    --border: #26364b;
+    --text: #e8f0fa;
+    --muted: #91a4ba;
+    --teal: #20c9b0;
+    --cyan: #42b8e8;
+    --green: #20c997;
+    --red: #ff5d6c;
+    --amber: #f5b942;
+}
+
+/* Main application */
+
+.stApp {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove default header */
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* Sidebar */
+
+section[data-testid="stSidebar"] {
+    background: #101a2b;
+    border-right: 1px solid var(--border);
+}
+
+section[data-testid="stSidebar"] * {
+    color: var(--text);
+}
+
+/* Main heading */
+
+h1, h2, h3 {
+    color: var(--text) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+h1 {
+    font-weight: 800 !important;
+    letter-spacing: -1px;
+}
+
+p, label {
+    color: var(--muted);
+}
+
+/* Metric cards */
+
+div[data-testid="stMetric"] {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    transition: all 0.25s ease;
+}
+
+div[data-testid="stMetric"]:hover {
+    border-color: var(--teal);
+    transform: translateY(-3px);
+}
+
+div[data-testid="stMetricLabel"] {
+    color: var(--muted);
+}
+
+div[data-testid="stMetricValue"] {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* Buttons */
+
+.stButton > button {
+    background: linear-gradient(135deg, #20c9b0, #159eaa);
+    color: #06151c;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 20px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(32, 201, 176, 0.2);
+    color: #06151c;
+}
+
+/* Navigation radio buttons */
+
+section[data-testid="stSidebar"] 
+div[role="radiogroup"] label {
+    background: transparent;
+    border-radius: 8px;
+    padding: 9px;
+    margin-bottom: 5px;
+}
+
+section[data-testid="stSidebar"] 
+div[role="radiogroup"] label:hover {
+    background: var(--panel-light);
+}
+
+/* Containers */
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    border-color: var(--border);
+    border-radius: 14px;
+}
+
+/* Dividers */
+
+hr {
+    border-color: var(--border);
+}
+
+/* Dataframes */
+
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+/* Status labels */
+
+.status-online {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.status-warning {
+    color: var(--amber);
+    font-weight: 700;
+}
+
+/* Custom section cards */
+
+.sf-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 14px;
+}
+
+.sf-card:hover {
+    border-color: var(--teal);
+}
+
+.sf-muted {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.sf-highlight {
+    color: var(--teal);
+    font-weight: 700;
+}
+
+/* Smooth transitions */
+
+* {
+    transition: border-color 0.2s ease;
+}
